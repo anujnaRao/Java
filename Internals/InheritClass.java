@@ -10,8 +10,9 @@ class SuperClass
     System.out.println("Value of i is "+i);
   }
 }
-class SubClass
+class SubClass extends SuperClass
 {
+  int i=20;
   SubClass()
   {
     super();
@@ -19,8 +20,16 @@ class SubClass
   }
   void display()
   {
-    int i=20;
     super.display();
     System.out.println("Value of i is "+i);
   }
+}
+
+public class InheritClass
+{
+ public static void main(String[] ar)
+ {
+   SubClass s=new SubClass();
+   s.display();
+ }
 }
